@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DreamTrips - Brand Ambassador</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            max-width: 500px;
+            width: 100%;
+        }
+        
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+            letter-spacing: 3px;
+        }
+        
+        .title {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        
+        .form-box {
+            background: white;
+            color: black;
+            padding: 40px 30px;
+            border-radius: 15px;
+        }
+        
+        .form-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+        
+        .form-subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.4;
+        }
+        
+        .input {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        
+        .btn {
+            width: 100%;
+            background: #007bff;
+            color: white;
+            padding: 18px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+        
+        .urgent {
+            background: #ff4757;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        
+        @media (max-width: 600px) {
+            .title {
+                font-size: 2rem;
+            }
+            .form-box {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">DREAMTRIPS</div>
+        
+        <h1 class="title">YOU SHOULD BE HERE</h1>
+        
+        <p class="subtitle">Join the legendary relaunch as a Brand Ambassador</p>
+        
+        <div class="form-box">
+            <h2 class="form-title">Become a Brand Ambassador</h2>
+            <p class="form-subtitle">The travel club that took the world by storm is back. Be part of something legendary from the ground up.</p>
+            
+            <form id="form">
+                <input type="text" class="input" placeholder="First Name" required>
+                <input type="email" class="input" placeholder="Email Address" required>
+                <input type="tel" class="input" placeholder="Phone Number" required>
+                <button type="submit" class="btn">Join the Relaunch</button>
+            </form>
+            
+            <div class="urgent">Limited Spots Available - Join Now!</div>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('form').onsubmit = function(e) {
+            e.preventDefault();
+            window.location.href = 'https://dreamtripslaunch.com/funnel?ref=lorellenicole';
+        };
+    </script>
+</body>
+</html>
