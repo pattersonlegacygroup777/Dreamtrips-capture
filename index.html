@@ -1,139 +1,269 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>DreamTrips - Brand Ambassador</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DreamTrips Brand Ambassador</title>
     <style>
-        body {
+        * {
             margin: 0;
-            padding: 20px;
-            background: black;
-            color: white;
-            font-family: Arial, sans-serif;
-            text-align: center;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            color: #ffffff;
             min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            font-size: 48px;
+            font-weight: 900;
+            letter-spacing: 8px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .tagline {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #d4d4d4;
+            margin-bottom: 10px;
+        }
+
+        .business-opportunity {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+            color: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 1.6;
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+        }
+
+        .card {
+            background: linear-gradient(145deg, #f5f5f5 0%, #ffffff 100%);
+            color: #000;
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
+
+        .card-title {
+            font-size: 28px;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .card-description {
+            text-align: center;
+            font-size: 16px;
+            color: #444;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .benefits {
+            background: #f9f9f9;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .benefit-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .check-icon {
+            width: 20px;
+            height: 20px;
+            background: #d4af37;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-        }
-        
-        .container {
-            max-width: 500px;
-            width: 100%;
-        }
-        
-        .logo {
-            font-size: 2rem;
+            margin-right: 12px;
+            flex-shrink: 0;
             font-weight: bold;
-            margin-bottom: 30px;
-            letter-spacing: 3px;
+            font-size: 12px;
         }
-        
-        .title {
-            font-size: 3rem;
-            font-weight: bold;
-            margin-bottom: 20px;
-            line-height: 1.1;
+
+        .form-group {
+            margin-bottom: 15px;
         }
-        
-        .subtitle {
-            font-size: 1.2rem;
-            margin-bottom: 40px;
-            opacity: 0.9;
-        }
-        
-        .form-box {
-            background: white;
-            color: black;
-            padding: 40px 30px;
-            border-radius: 15px;
-        }
-        
-        .form-title {
-            font-size: 1.8rem;
-            font-weight: bold;
-            margin-bottom: 5px;
-            text-transform: uppercase;
-        }
-        
-        .form-subtitle {
-            color: #666;
-            margin-bottom: 30px;
-            line-height: 1.4;
-        }
-        
-        .input {
+
+        input {
             width: 100%;
             padding: 15px;
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
             font-size: 16px;
-            box-sizing: border-box;
+            transition: border-color 0.3s;
+            background: #fff;
         }
-        
-        .btn {
+
+        input:focus {
+            outline: none;
+            border-color: #d4af37;
+        }
+
+        input::placeholder {
+            color: #999;
+        }
+
+        .cta-button {
             width: 100%;
-            background: #007bff;
-            color: white;
             padding: 18px;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 15px;
-        }
-        
-        .urgent {
-            background: #ff4757;
+            background: linear-gradient(135deg, #0066ff 0%, #0052cc 100%);
             color: white;
-            padding: 15px;
-            border-radius: 5px;
-            font-weight: bold;
-            text-transform: uppercase;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 800;
+            cursor: pointer;
+            letter-spacing: 1px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(0, 102, 255, 0.4);
         }
-        
-        @media (max-width: 600px) {
-            .title {
-                font-size: 2rem;
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 102, 255, 0.6);
+        }
+
+        .cta-button:active {
+            transform: translateY(0);
+        }
+
+        .rocket {
+            display: inline-block;
+            margin-left: 8px;
+        }
+
+        @media (max-width: 640px) {
+            .logo {
+                font-size: 36px;
+                letter-spacing: 4px;
             }
-            .form-box {
+
+            .tagline {
+                font-size: 24px;
+            }
+
+            .subtitle {
+                font-size: 16px;
+            }
+
+            .business-opportunity {
+                font-size: 16px;
+                padding: 15px;
+            }
+
+            .card {
                 padding: 30px 20px;
+            }
+
+            .card-title {
+                font-size: 24px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="logo">DREAMTRIPS</div>
-        
-        <h1 class="title">YOU SHOULD BE HERE</h1>
-        
-        <p class="subtitle">Join the legendary relaunch as a Brand Ambassador</p>
-        
-        <div class="form-box">
-            <h2 class="form-title">Become a Brand Ambassador</h2>
-            <p class="form-subtitle">The travel club that took the world by storm is back. Be part of something legendary from the ground up.</p>
-            
-            <form id="form">
-                <input type="text" class="input" placeholder="First Name" required>
-                <input type="email" class="input" placeholder="Email Address" required>
-                <input type="tel" class="input" placeholder="Phone Number" required>
-                <button type="submit" class="btn">Join the Relaunch</button>
+        <div class="header">
+            <div class="logo">DREAMTRIPS</div>
+            <div class="tagline">YOU SHOULD BE HERE</div>
+            <div class="subtitle">Ready to Build Your Travel Empire?</div>
+        </div>
+
+        <div class="business-opportunity">
+            Are you ready to earn a full-time income just by sharing a dream? Turn your passion for travel into a legendary business opportunity.
+        </div>
+
+        <div class="card">
+            <h2 class="card-title">BECOME A BRAND AMBASSADOR</h2>
+            <p class="card-description">
+                The travel club that took the world by storm is making its post-pandemic comeback. 
+                This is your chance to be part of something legendary from the ground up.
+            </p>
+
+            <div class="benefits">
+                <div class="benefit-item">
+                    <div class="check-icon">✓</div>
+                    <div>Build your business sharing extraordinary travel experiences</div>
+                </div>
+                <div class="benefit-item">
+                    <div class="check-icon">✓</div>
+                    <div>Access 800K+ luxury destinations at unbeatable prices</div>
+                </div>
+                <div class="benefit-item">
+                    <div class="check-icon">✓</div>
+                    <div>Join the most recognized vacation lifestyle membership club</div>
+                </div>
+                <div class="benefit-item">
+                    <div class="check-icon">✓</div>
+                    <div>No ordinary travel agency - this is DreamTrips</div>
+                </div>
+            </div>
+
+            <form id="ambassadorForm">
+                <div class="form-group">
+                    <input type="text" placeholder="First Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" placeholder="Phone Number" required>
+                </div>
+                <button type="submit" class="cta-button">
+                    JOIN THE RELAUNCH<span class="rocket">🚀</span>
+                </button>
             </form>
-            
-            <div class="urgent">Limited Spots Available - Join Now!</div>
         </div>
     </div>
-    
+
     <script>
-        document.getElementById('form').onsubmit = function(e) {
+        document.getElementById('ambassadorForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            window.location.href = 'https://dreamtripslaunch.com/funnel?ref=lorellenicole';
-        };
+            alert('Thank you for your interest! Someone from our team will contact you soon.');
+        });
     </script>
 </body>
 </html>
